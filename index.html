@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Galeri Foto dengan Hashtag</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Galeri Foto AK Kreatif</title>
 </head>
 <body>
-    <h1>Foto Vaforite</h1>
 
-    <div class="gallery">
-        <div class="card">
-            <img src="pantai.jpeg" alt="Senja di Ujung Pantai">
-            <div class="card-content">
-                <div class="title">Senja di Ujung Pantai</div>
-                <div class="desc">senja di pantai dengan pohon kelapa.</div>
-                <div class="hashtags">#Senja #Pantai #SunsetVibes #NatureLovers #IndahnyaIndonesia #HealingTime</div>
-                <div class="time" id="time1"></div>
-                <button class="fav-button">Favorit</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="taman.jpeg" alt="Taman Fantasi Alam">
-            <div class="card-content">
-                <div class="title">Taman Fantasi Alam</div>
-                <div class="desc">Taman dengan tanaman berbentuk burung unik.</div>
-                <div class="hashtags">#TamanIndah #KreativitasAlam #GardenArt #NatureCreativity #HijaukanBumi #WisataHijau</div>
-                <div class="time" id="time2"></div>
-                <button class="fav-button">Favorit</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="gunung.jpg" alt="Langkah Menuju Puncak">
-            <div class="card-content">
-                <div class="title">Langkah Menuju Puncak</div>
-                <div class="desc">Gunung dengan pemandangan langit biru cerah.</div>
-                <div class="hashtags">#Gunung #Hiking #Mountains #BlueSky #AdventureTime #ExploreIndonesia #PecintaAlam</div>
-                <div class="time" id="time3"></div>
-                <button class="fav-button">Favorit</button>
-            </div>
-        </div>
-
-        <div class="card">
-            <img src="awan.jpg" alt="Di Atas Awan">
-            <div class="card-content">
-                <div class="title">Di Atas Awan</div>
-                <div class="desc">Pemandangan di atas awan dengan langit biru.</div>
-                <div class="hashtags">#SkyView #DiAtasAwan #Cloudscape #SkyLovers #PeacefulView #LangitBiru #NaturePhotography</div>
-                <div class="time" id="time4"></div>
-                <button class="fav-button">Favorit</button>
-            </div>
-        </div>
+  <header>
+    <div class="logo-kiri">
+      <img src="3.png" alt="Logo AK kreatif" />
     </div>
+    <nav>
+      <a href="#home">home</a>
+      <a href="#artikel">Artikel</a>
+      <a href="#galeri">Galeri</a>
+    </nav>
+  </header>
 
-    <script src="script.js"></script>
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Ak Kreatif</h1>
+      <h1>Coffe</h1>
+    </div>
+    <button class="panah kiri" onclick="slideSebelumnya()">❮</button>
+    <button class="panah kanan" onclick="slideSelanjutnya()">❯</button>
+  </section>
+
+  <section id="galeri" class="konten-section">
+    <h2>Galeri Foto</h2>
+    <p>Temukan foto menarik yang kami upload.</p>
+  </section>
+
+  <!-- Upload Foto dan Filter -->
+  <section id="upload" class="konten-section">
+    <h2>Upload Foto Kamu</h2>
+
+    <select id="filterKategori" onchange="filterKategoriFoto()">
+      <option value="semua">Tampilkan Semua</option>
+      <option value="portrait">Portrait</option>
+      <option value="landscape">Landscape</option>
+    </select>
+
+    <form onsubmit="handleUpload(event)">
+      <input type="file" id="fileInput" accept="image/*" required />
+      <input type="text" id="namaInput" placeholder="Nama yang upload" />
+      <input type="text" id="hashtagInput" placeholder="Hashtag (contoh: portrait)" />
+      <button type="submit">Upload Foto</button>
+    </form>
+
+    <div id="uploadGaleri" class="galeri-upload"></div>
+  </section>
+
+  <!-- Artikel Penutup -->
+  <section id="artikel" class="konten-section">
+    <h2>Artikel Foto</h2>
+    <p>
+      Fotografi jalanan (street photography) adalah seni menangkap momen kehidupan sehari-hari secara spontan.
+      Melalui lensa kamera, kami mencoba menghadirkan kisah, emosi, dan keindahan tersembunyi yang sering luput dari pandangan.
+    </p>
+    <p>
+      Setiap foto memiliki cerita: tentang waktu, tempat, dan orang-orang di dalamnya.
+      Kami percaya bahwa foto terbaik tidak selalu datang dari kamera mahal, tapi dari mata yang peka dan hati yang terbuka.
+    </p>
+    <p>
+      Terima kasih telah berkunjung ke galeri kami. Tetap semangat berkarya dan abadikan dunia dari sudut pandang unikmu!
+    </p>
+  </section>
+
+  <script src="script.js"></script>
 </body>
 </html>
