@@ -1,0 +1,87 @@
+body {
+    font-family: 'Poppins', sans-serif;
+    text-align: center;
+    padding: 50px;
+    transition: background 1s;
+}
+
+h1 {
+    color: #fff;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    margin-top: 40px;
+}
+
+.card {
+    background: white;
+    border-radius: 1px;
+    width: 250px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    overflow: hidden;
+    transition: transform 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+.card img {
+    width: 100%;
+    height: 290px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.title {
+    font-weight: 600;
+    margin: 5px 0;
+    color: #444;
+}
+
+.desc, .hashtags, .time {
+    font-size: 14px;
+    color: #666;
+    margin: 2px 0;
+}
+
+.fav-button {
+    background: #00bcd4;
+    border: none;
+    color: white;
+    padding: 6px 12px;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: background 0.3s;
+}
+
+.fav-button:hover {
+    background: #0097a7;
+}
+.card-content {
+    opacity: 0;
+    transition: opacity 0.3s;
+    background: rgba(255, 255, 255, 0.9);
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 10px;
+}
+
+.card {
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover .card-content {
+    opacity: 1;
+}
