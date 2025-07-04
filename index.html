@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Galeri Foto AK Kreatif</title>
+</head>
+<body>
+
+  <header>
+    <div class="logo-kiri">
+      <img src="3.png" alt="Logo AK kreatif" />
+    </div>
+    <nav>
+      <a href="#hero">Home</a>
+      <a href="#artikel">Artikel</a>
+      <a href="#galeri">Galeri</a>
+      <a href="upload.html">Upload</a>
+    </nav>
+  </header>
+
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <h1>Ak Kreatif</h1>
+      <h1>Coffe</h1>
+    </div>
+    <button class="panah kiri" onclick="slideSebelumnya()">❮</button>
+    <button class="panah kanan" onclick="slideSelanjutnya()">❯</button>
+  </section>
+
+  <section id="galeri" class="konten-section">
+    <h2>Galeri Foto</h2>
+    <p>Temukan foto menarik y.</p>
+    <div id="userGaleri" class="galeri-upload"></div>
+  </section>
+
+  <section id="artikel" class="konten-section">
+    <h2>Artikel Foto</h2>
+    <p>
+      Fotografi jalanan (street photography) adalah seni menangkap momen kehidupan sehari-hari secara spontan.
+    </p>
+    <p>
+      Setiap foto memiliki cerita tentang waktu, tempat, dan orang-orang di dalamnya.
+    </p>
+    <p>
+      Terima kasih telah berkunjung ke galeri kami.
+    </p>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
