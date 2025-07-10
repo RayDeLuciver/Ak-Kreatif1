@@ -1,106 +1,108 @@
-document.addEventListener('DOMContentLoaded', () => {
-   
-    const backgrounds = [
-        'linear-gradient(to right, #8360c3, #2ebf91)',
-        'linear-gradient(to right,rgb(159, 218, 227),rgb(223, 156, 206))',
-        'linear-gradient(to right,rgb(160, 205, 235), #185a9d)',
-        'linear-gradient(to right,rgb(185, 227, 165),rgb(218, 156, 221))'
-    ];
-    let current = 0;
-    setInterval(() => {
-        document.body.style.background = backgrounds[current];
-        current = (current + 1) % backgrounds.length;
-    }, 5000);
+const slides = [
+  "img/fto1.jpg",
+  "img/fto2.jpg",
+  "img/fto3.jpg"
+];
 
-    
-    const uploadInput = document.getElementById('uploadInput');
-    const usernameInput = document.getElementById('usernameInput');
-    const hashtagInput = document.getElementById('hashtagInput');
-    const uploadButton = document.getElementById('uploadButton');
-    const gallery = document.getElementById('gallery');
+let index = 0;
+let intervalID;
 
-    
-    const now = new Date().toLocaleString('id-ID');
-    document.querySelectorAll('.time').forEach(el => {
-        el.textContent = 'Upload: ' + now;
-    });
+function tampilkanSlide(i) {
+  const hero = document.querySelector(".hero");
+  if (hero) {
+    hero.style.backgroundImage = `url('${slides[i]}')`;
+  }
+}
 
-    
-    uploadButton.addEventListener('click', () => {
-        const files = uploadInput.files;
-        const username = usernameInput.value.trim();
-        const hashtagsRaw = hashtagInput.value.trim();
+function mulaiSlideOtomatis() {
+  intervalID = setInterval(() => {
+    index = (index + 1) % slides.length;
+    tampilkanSlide(index);
+  }, 5000);
+}
 
-        if (files.length === 0) {
-            alert('Pilih gambar terlebih dahulu.');
-            return;
-        }
-        if (!username) {
-            alert('Masukkan nama pengguna.');
-            return;
-        }
-        if (!hashtagsRaw) {
-            alert('Masukkan hashtag.');
-            return;
-        }
+function slideSebelumnya() {
+  index = (index - 1 + slides.length) % slides.length;
+  tampilkanSlide(index);
+  resetInterval();
+}
 
-        const hashtags = hashtagsRaw.split(',')
-            .map(tag => '#' + tag.trim().replace(/^#/, ''))
-            .join(' ');
+function slideSelanjutnya() {
+  index = (index + 1) % slides.length;
+  tampilkanSlide(index);
+  resetInterval();
+}
 
-        Array.from(files).forEach(file => {
-            const reader = new FileReader();
-            reader.onload = function (e) {
-                const card = document.createElement('div');
-                card.className = 'card';
+function resetInterval() {
+  clearInterval(intervalID);
+  mulaiSlideOtomatis();
+}
 
-                const img = document.createElement('img');
-                img.src = e.target.result;
-                img.alt = 'Uploaded Image';
-
-                const cardContent = document.createElement('div');
-                cardContent.className = 'card-content';
-
-                const title = document.createElement('div');
-                title.className = 'title';
-                title.textContent = username;
-
-                const desc = document.createElement('div');
-                desc.className = 'desc';
-                desc.textContent = 'Foto yang baru diunggah.';
-
-                const hashtagsDiv = document.createElement('div');
-                hashtagsDiv.className = 'hashtags';
-                hashtagsDiv.textContent = hashtags;
-
-                const timeDiv = document.createElement('div');
-                timeDiv.className = 'time';
-                timeDiv.textContent = 'Upload: ' + new Date().toLocaleString('id-ID');
-
-                const deleteButton = document.createElement('button');
-                deleteButton.className = 'delete-button';
-                deleteButton.textContent = 'Hapus';
-                deleteButton.addEventListener('click', () => {
-                    gallery.removeChild(card);
-                });
-
-                cardContent.appendChild(title);
-                cardContent.appendChild(desc);
-                cardContent.appendChild(hashtagsDiv);
-                cardContent.appendChild(timeDiv);
-                cardContent.appendChild(deleteButton);
-
-                card.appendChild(img);
-                card.appendChild(cardContent);
-
-                gallery.prepend(card);
-            };
-            reader.readAsDataURL(file);
-        });
-
-        
-        uploadInput.value = '';
-        usernameInput.value = '';
-        hashtagInput.value = '';
-    });
+window.addEventListener("load", () => {
+  tampilkanSlide(index);
+  mulaiSlideOtomatis();
+  tampilkanGaleriDariStorage();
 });
+
+function tampilkanGaleriDariStorage() {
+  const container = document.getElementById("uploadGaleri");
+  if (!container) return;
+
+  const data = JSON.parse(localStorage.getItem("galeri-data")) || [];
+  container.innerHTML = "";
+
+  data.forEach((item, idx) => {
+    const div = document.createElement("div");
+    div.className = `galeri-item ${item.hashtag}`;
+    div.innerHTML = `
+      <img src="${item.url}" alt="Foto" onclick="toggleInfo(this)" />
+      <div class="info-foto" style="display:none">
+        ${item.nama} <br>#${item.hashtag} <br>Tanggal: ${item.tanggal} <br>
+        <button onclick="hapusFoto(${idx})">Hapus</button>
+      </div>
+    `;
+    container.appendChild(div);
+  });
+}
+
+function toggleInfo(imgElement) {
+  const info = imgElement.nextElementSibling;
+  info.style.display = info.style.display === "none" ? "block" : "none";
+}
+
+function handleUpload(event) {
+  event.preventDefault();
+
+  const fileInput = document.getElementById("fileInput");
+  const namaInput = document.getElementById("namaInput");
+  const hashtagInput = document.getElementById("hashtagInput");
+
+  const file = fileInput.files[0];
+  if (!file) return;
+
+  const reader = new FileReader();
+  reader.onload = function () {
+    const url = reader.result;
+    const nama = namaInput.value.trim() || "Tidak diketahui";
+    const hashtag = hashtagInput.value.trim() || "umum";
+    const tanggal = new Date().toLocaleDateString("id-ID", {
+      weekday: "long", year: "numeric", month: "long", day: "numeric"
+    });
+
+    const data = JSON.parse(localStorage.getItem("galeri-data")) || [];
+    data.push({ url, nama, hashtag, tanggal });
+    localStorage.setItem("galeri-data", JSON.stringify(data));
+
+    alert("Foto berhasil diupload!");
+    window.location.href = "index.html#galeri";
+  };
+
+  reader.readAsDataURL(file);
+}
+
+function hapusFoto(index) {
+  const data = JSON.parse(localStorage.getItem("galeri-data")) || [];
+  data.splice(index, 1);
+  localStorage.setItem("galeri-data", JSON.stringify(data));
+  tampilkanGaleriDariStorage();
+}
