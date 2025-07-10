@@ -1,107 +1,106 @@
-const slides = [
-  "img/fto1.jpg",
-  "img/fto2.jpg",
-  "img/fto3.jpg"
-];
+document.addEventListener('DOMContentLoaded', () => {
+   
+    const backgrounds = [
+        'linear-gradient(to right, #8360c3, #2ebf91)',
+        'linear-gradient(to right,rgb(159, 218, 227),rgb(223, 156, 206))',
+        'linear-gradient(to right,rgb(160, 205, 235), #185a9d)',
+        'linear-gradient(to right,rgb(185, 227, 165),rgb(218, 156, 221))'
+    ];
+    let current = 0;
+    setInterval(() => {
+        document.body.style.background = backgrounds[current];
+        current = (current + 1) % backgrounds.length;
+    }, 5000);
 
-let index = 0;
-let intervalID;
+    
+    const uploadInput = document.getElementById('uploadInput');
+    const usernameInput = document.getElementById('usernameInput');
+    const hashtagInput = document.getElementById('hashtagInput');
+    const uploadButton = document.getElementById('uploadButton');
+    const gallery = document.getElementById('gallery');
 
-function tampilkanSlide(i) {
-  const hero = document.querySelector(".hero");
-  if (hero) {
-    hero.style.backgroundImage = `url('${slides[i]}')`;
-  }
-}
-
-function mulaiSlideOtomatis() {
-  intervalID = setInterval(() => {
-    index = (index + 1) % slides.length;
-    tampilkanSlide(index);
-  }, 5000);
-}
-
-function slideSebelumnya() {
-  index = (index - 1 + slides.length) % slides.length;
-  tampilkanSlide(index);
-  resetInterval();
-}
-
-function slideSelanjutnya() {
-  index = (index + 1) % slides.length;
-  tampilkanSlide(index);
-  resetInterval();
-}
-
-function resetInterval() {
-  clearInterval(intervalID);
-  mulaiSlideOtomatis();
-}
-
-window.addEventListener("load", () => {
-  tampilkanSlide(index);
-  mulaiSlideOtomatis();
-  tampilkanUserGaleri();
-});
-
-function handleUserUpload(event) {
-  event.preventDefault();
-
-  const fileInput = document.getElementById("userFileInput");
-  const namaInput = document.getElementById("userNamaInput");
-  const hashtagInput = document.getElementById("userHashtagInput");
-
-  const file = fileInput.files[0];
-  if (!file) return;
-
-  const reader = new FileReader();
-  reader.onload = function () {
-    const url = reader.result;
-    const nama = namaInput.value.trim();
-    const hashtag = hashtagInput.value.trim();
-    const tanggal = new Date().toLocaleDateString("id-ID", {
-      weekday: "long", year: "numeric", month: "long", day: "numeric"
+    
+    const now = new Date().toLocaleString('id-ID');
+    document.querySelectorAll('.time').forEach(el => {
+        el.textContent = 'Upload: ' + now;
     });
 
-    const data = JSON.parse(localStorage.getItem("galeri-user")) || [];
-    data.push({ url, nama, hashtag, tanggal });
-    localStorage.setItem("galeri-user", JSON.stringify(data));
+    
+    uploadButton.addEventListener('click', () => {
+        const files = uploadInput.files;
+        const username = usernameInput.value.trim();
+        const hashtagsRaw = hashtagInput.value.trim();
 
-    alert("Foto berhasil di-upload!");
-    event.target.reset();
-  };
+        if (files.length === 0) {
+            alert('Pilih gambar terlebih dahulu.');
+            return;
+        }
+        if (!username) {
+            alert('Masukkan nama pengguna.');
+            return;
+        }
+        if (!hashtagsRaw) {
+            alert('Masukkan hashtag.');
+            return;
+        }
 
-  reader.readAsDataURL(file);
-}
+        const hashtags = hashtagsRaw.split(',')
+            .map(tag => '#' + tag.trim().replace(/^#/, ''))
+            .join(' ');
 
-function tampilkanUserGaleri() {
-  const container = document.getElementById("userGaleri");
-  if (!container) return;
-  const data = JSON.parse(localStorage.getItem("galeri-user")) || [];
-  container.innerHTML = "";
+        Array.from(files).forEach(file => {
+            const reader = new FileReader();
+            reader.onload = function (e) {
+                const card = document.createElement('div');
+                card.className = 'card';
 
-  data.forEach((item, idx) => {
-    const div = document.createElement("div");
-    div.className = `galeri-item ${item.hashtag}`;
-    div.innerHTML = `
-      <img src="${item.url}" alt="Foto" onclick="toggleInfo(this)" />
-      <div class="info-foto">
-        ${item.nama} <br>#${item.hashtag} <br>${item.tanggal} <br>
-        <button onclick="hapusFoto(${idx})">Hapus</button>
-      </div>
-    `;
-    container.appendChild(div);
-  });
-}
+                const img = document.createElement('img');
+                img.src = e.target.result;
+                img.alt = 'Uploaded Image';
 
-function toggleInfo(imgElement) {
-  const info = imgElement.nextElementSibling;
-  info.style.display = info.style.display === "none" ? "block" : "none";
-}
+                const cardContent = document.createElement('div');
+                cardContent.className = 'card-content';
 
-function hapusFoto(index) {
-  const data = JSON.parse(localStorage.getItem("galeri-user")) || [];
-  data.splice(index, 1);
-  localStorage.setItem("galeri-user", JSON.stringify(data));
-  tampilkanUserGaleri();
-}
+                const title = document.createElement('div');
+                title.className = 'title';
+                title.textContent = username;
+
+                const desc = document.createElement('div');
+                desc.className = 'desc';
+                desc.textContent = 'Foto yang baru diunggah.';
+
+                const hashtagsDiv = document.createElement('div');
+                hashtagsDiv.className = 'hashtags';
+                hashtagsDiv.textContent = hashtags;
+
+                const timeDiv = document.createElement('div');
+                timeDiv.className = 'time';
+                timeDiv.textContent = 'Upload: ' + new Date().toLocaleString('id-ID');
+
+                const deleteButton = document.createElement('button');
+                deleteButton.className = 'delete-button';
+                deleteButton.textContent = 'Hapus';
+                deleteButton.addEventListener('click', () => {
+                    gallery.removeChild(card);
+                });
+
+                cardContent.appendChild(title);
+                cardContent.appendChild(desc);
+                cardContent.appendChild(hashtagsDiv);
+                cardContent.appendChild(timeDiv);
+                cardContent.appendChild(deleteButton);
+
+                card.appendChild(img);
+                card.appendChild(cardContent);
+
+                gallery.prepend(card);
+            };
+            reader.readAsDataURL(file);
+        });
+
+        
+        uploadInput.value = '';
+        usernameInput.value = '';
+        hashtagInput.value = '';
+    });
+});
