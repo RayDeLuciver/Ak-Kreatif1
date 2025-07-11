@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="style.css" />
+  <title>Upload Foto</title>
+</head>
+<body class="upload-page">
+
+  <h1 class="judul-upload">Upload Foto Anda</h1>
+
+  <form id="uploadForm" onsubmit="handleUpload(event)">
+    <input type="text" id="namaInput" placeholder="Nama Foto" required />
+    <input type="text" id="hashtagInput" placeholder="Hashtag" required />
+    <input type="file" id="fileInput" accept="image/*" required />
+    <button type="submit">Upload</button>
+  </form>
+
+  <script src="script.js"></script>
+</body>
+</html>
