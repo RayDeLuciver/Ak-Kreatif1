@@ -1,0 +1,381 @@
+/* Custom styles for Walking Story Photography */
+
+/* Aspect ratio utilities for consistent image containers */
+.aspect-w-4 {
+    position: relative;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+}
+
+.aspect-h-3 {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+}
+
+/* Category card hover effects */
+.category-card {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+}
+
+.category-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.category-card .aspect-w-4 {
+    min-height: 200px;
+}
+
+/* Street photography hover effects */
+.street-photo {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    min-height: 200px;
+}
+
+.street-photo:hover {
+    transform: scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.street-photo .aspect-w-4 {
+    min-height: 200px;
+}
+
+/* Typography enhancements */
+h1, h2, h3 {
+    letter-spacing: 0.05em;
+}
+
+/* Header styling */
+header {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Section spacing */
+section {
+    min-height: auto;
+}
+
+/* Grid enhancements */
+.grid {
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .grid {
+        gap: 2rem;
+    }
+}
+
+/* Footer logo styling */
+footer .w-8.h-8 {
+    background: linear-gradient(45deg, #ffffff, #f3f4f6);
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for images */
+.category-card .aspect-w-4,
+.street-photo .aspect-w-4 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Responsive text sizing */
+@media (max-width: 640px) {
+    .category-card h3,
+    .street-photo h3 {
+        font-size: 1.25rem;
+    }
+    
+    h2 {
+        font-size: 2rem;
+    }
+}
+
+/* Enhanced gradient overlays */
+.category-card .absolute,
+.street-photo .absolute {
+    transition: background-color 0.3s ease;
+}
+
+.category-card:hover .absolute {
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.street-photo:hover .absolute {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Photo gallery styles */
+.photo-item {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.photo-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.photo-item img {
+    transition: transform 0.3s ease;
+}
+
+.photo-item:hover img {
+    transform: scale(1.05);
+}
+
+/* Back button styles */
+.back-button {
+    transition: all 0.3s ease;
+    font-weight: 600;
+    letter-spacing: 0.025em;
+}
+
+.back-button:hover {
+    transform: translateX(-2px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Category view transitions */
+.category-view {
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive adjustments for category views */
+@media (max-width: 768px) {
+    .category-view .flex {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+    
+    .category-view h2 {
+        font-size: 2rem;
+        order: -1;
+    }
+    
+    .back-button {
+        align-self: center;
+    }
+}
+
+/* Image loading states */
+.photo-item img {
+    background-color: #f3f4f6;
+    background-image: linear-gradient(45deg, #f9fafb 25%, transparent 25%), 
+                      linear-gradient(-45deg, #f9fafb 25%, transparent 25%), 
+                      linear-gradient(45deg, transparent 75%, #f9fafb 75%), 
+                      linear-gradient(-45deg, transparent 75%, #f9fafb 75%);
+    background-size: 20px 20px;
+    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+}
+
+/* Enhanced photo grid spacing */
+.category-view .grid {
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .category-view .grid {
+        gap: 2rem;
+    }
+}
+
+/* Improved header consistency */
+.category-view header {
+    border-bottom: 1px solid #e5e7eb;
+}
+
+/* Slider styles */
+.slider-container {
+    position: relative;
+    overflow: hidden;
+}
+
+.slide {
+    transition: opacity 1s ease-in-out;
+}
+
+.slide.active {
+    opacity: 1;
+}
+
+.slider-prev,
+.slider-next {
+    backdrop-filter: blur(10px);
+    z-index: 10;
+}
+
+.slider-prev:hover,
+.slider-next:hover {
+    backdrop-filter: blur(15px);
+    transform: scale(1.1);
+}
+
+.slider-dot {
+    cursor: pointer;
+    z-index: 10;
+}
+
+.slider-dot.active-dot {
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: scale(1.2);
+}
+
+/* Slider text animations */
+.slide .text-center {
+    animation: slideTextIn 1s ease-out;
+}
+
+@keyframes slideTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsive slider adjustments */
+@media (max-width: 768px) {
+    .slider-prev,
+    .slider-next {
+        padding: 0.5rem;
+    }
+    
+    .slider-prev svg,
+    .slider-next svg {
+        width: 1.25rem;
+        height: 1.25rem;
+    }
+    
+    .slide h2 {
+        font-size: 2rem;
+    }
+    
+    .slide p {
+        font-size: 1rem;
+    }
+}
+
+/* Slider loading state */
+.slide img {
+    transition: opacity 0.3s ease;
+}
+
+.slide img[src=""] {
+    background: linear-gradient(45deg, #f3f4f6, #e5e7eb);
+    opacity: 0.7;
+}
+
+/* Photo tooltip styles */
+.photo-tooltip {
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.6));
+    backdrop-filter: blur(10px);
+    border-radius: 0.5rem;
+    padding: 0.75rem;
+    text-shadow: 0 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.photo-tooltip h4 {
+    margin-bottom: 0.25rem;
+    font-size: 1.125rem;
+    line-height: 1.25;
+}
+
+.photo-tooltip p {
+    font-size: 0.875rem;
+    line-height: 1.25;
+    opacity: 0.9;
+}
+
+/* Responsive tooltip adjustments */
+@media (max-width: 640px) {
+    .photo-tooltip {
+        padding: 0.5rem;
+        bottom: 0.5rem;
+        left: 0.5rem;
+        right: 0.5rem;
+    }
+    
+    .photo-tooltip h4 {
+        font-size: 1rem;
+    }
+    
+    .photo-tooltip p {
+        font-size: 0.75rem;
+    }
+}
+
+/* Custom background patterns for categories */
+.category-card:nth-child(1) .aspect-w-4 {
+    background: linear-gradient(135deg, #1f2937 0%, #374151 50%, #4b5563 100%);
+}
+
+.category-card:nth-child(2) .aspect-w-4 {
+    background: linear-gradient(135deg, #ea580c 0%, #dc2626 50%, #b91c1c 100%);
+}
+
+.category-card:nth-child(3) .aspect-w-4 {
+    background: linear-gradient(135deg, #d97706 0%, #b45309 50%, #92400e 100%);
+}
+
+.category-card:nth-child(4) .aspect-w-4 {
+    background: linear-gradient(135deg, #4b5563 0%, #374151 50%, #1f2937 100%);
+}
+
+.category-card:nth-child(5) .aspect-w-4 {
+    background: linear-gradient(135deg, #dc2626 0%, #b91c1c 50%, #991b1b 100%);
+}
+
+.category-card:nth-child(6) .aspect-w-4 {
+    background: linear-gradient(135deg, #059669 0%, #047857 50%, #065f46 100%);
+}
+
+/* Street photography backgrounds */
+.street-photo:nth-child(1) .aspect-w-4 {
+    background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 50%, #1e40af 100%);
+}
+
+.street-photo:nth-child(2) .aspect-w-4 {
+    background: linear-gradient(135deg, #10b981 0%, #059669 50%, #047857 100%);
+}
+
+.street-photo:nth-child(3) .aspect-w-4 {
+    background: linear-gradient(135deg, #8b5cf6 0%, #7c3aed 50%, #6d28d9 100%);
+}
+
+.street-photo:nth-child(4) .aspect-w-4 {
+    background: linear-gradient(135deg, #f59e0b 0%, #d97706 50%, #b45309 100%);
+}
+
+.street-photo:nth-child(5) .aspect-w-4 {
+    background: linear-gradient(135deg, #ec4899 0%, #db2777 50%, #be185d 100%);
+}
+
+.street-photo:nth-child(6) .aspect-w-4 {
+    background: linear-gradient(135deg, #6366f1 0%, #4f46e5 50%, #4338ca 100%);
+}
