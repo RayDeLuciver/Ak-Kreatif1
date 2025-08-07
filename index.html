@@ -1,0 +1,1170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Walking Story Photography</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+</head>
+<body class="bg-gray-100 font-sans">
+    <header class="bg-white shadow-sm py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+            <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+        </div>
+    </header>
+
+    <section class="relative">
+        <div class="relative h-96 md:h-[500px] overflow-hidden">
+            <div class="slider-container relative w-full h-full">
+                <div class="slide active absolute inset-0 transition-opacity duration-1000">
+                    <img src="https://picsum.photos/1200/800?random=100" alt="Featured Photo 1" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">CAPTURE MOMENTS</h2>
+                            <p class="text-lg md:text-xl">Street Photography & Life Stories</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="https://picsum.photos/1200/800?random=101" alt="Featured Photo 2" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">URBAN STORIES</h2>
+                            <p class="text-lg md:text-xl">Documenting City Life & Culture</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="https://picsum.photos/1200/800?random=102" alt="Featured Photo 3" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">HUMAN CONNECTIONS</h2>
+                            <p class="text-lg md:text-xl">Every Face Tells a Story</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="slide absolute inset-0 transition-opacity duration-1000 opacity-0">
+                    <img src="https://picsum.photos/1200/800?random=103" alt="Featured Photo 4" class="w-full h-full object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-30 flex items-center justify-center">
+                        <div class="text-center text-white">
+                            <h2 class="text-4xl md:text-6xl font-bold mb-4">CULINARY JOURNEY</h2>
+                            <p class="text-lg md:text-xl">Food Culture & Traditions</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <button class="slider-prev absolute left-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"></path>
+                </svg>
+            </button>
+            <button class="slider-next absolute right-4 top-1/2 transform -translate-y-1/2 bg-white bg-opacity-20 hover:bg-opacity-30 text-white p-3 rounded-full transition-all duration-300">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                </svg>
+            </button>
+            
+            <div class="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex space-x-2">
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300 active-dot" data-slide="0"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="1"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="2"></button>
+                <button class="slider-dot w-3 h-3 rounded-full bg-white bg-opacity-50 hover:bg-opacity-75 transition-all duration-300" data-slide="3"></button>
+            </div>
+        </div>
+    </section>
+
+    <div id="main-content">
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Categories</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="human-interest">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-gray-800 to-gray-900">
+                            <img src="img/Tertawa saat boncengan.jpg" alt="Human Interest" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">HUMAN<br>INTEREST</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="culinary">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-orange-500 to-orange-700">
+                            <img src="img/Pedagang Jajanan Kaki Lima.jpg" alt="Culinary" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">CULINARY</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="social-activity">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-amber-600 to-amber-800">
+                            <img src="img/Kumpulan Mahasiswa sedang Menyanyikan Yel-Yel.jpg" alt="Social Activity" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">SOCIAL<br>ACTIVITY</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="cityscape">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-gray-600 to-gray-800">
+                            <img src="img/Gedung Dinas Kesehatan Kota Samarinda.jpg" alt="Cityscape" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">CITYSCAPE</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="public-space">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-red-500 to-red-700">
+                            <img src="img/Taman Samarinda.jpg" alt="Public Space" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">PUBLIC<br>SPACE</h3>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="category-card relative overflow-hidden rounded-lg shadow-lg group cursor-pointer" data-category="environment">
+                        <div class="aspect-w-3 aspect-h-2 bg-gradient-to-br from-green-600 to-green-800">
+                            <img src="img/Pemotor di dedaunan.jpg" alt="Environment" class="absolute inset-0 w-full h-full object-cover">
+                            <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center">
+                                <h3 class="text-white text-2xl font-bold text-center">ENVIRONMENT</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    <section class="py-12 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Street Photography</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-blue-400 to-blue-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-green-400 to-green-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-purple-400 to-purple-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-yellow-400 to-yellow-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-pink-400 to-pink-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+
+                <div class="street-photo relative overflow-hidden rounded-lg shadow-lg group cursor-pointer h-64 bg-gradient-to-br from-indigo-400 to-indigo-600">
+                    <div class="absolute inset-0 bg-black bg-opacity-20"></div>
+                </div>
+            </div>
+        </div>
+        
+
+        <section class="py-12 bg-gray-50">
+            <div class="container mx-auto px-4 max-w-6xl">
+                <h2 class="text-4xl font-bold text-center text-gray-800 mb-12">Artikel</h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <div class="article-card rounded-lg shadow-lg overflow-hidden bg-white cursor-pointer hover:shadow-xl transition-shadow duration-300" onclick="openArticleModal('The Magic of City Streets at Sunset', 'https://picsum.photos/400/300?random=301', 'Arif Pratama', 'Jakarta, Indonesia', 'Exploring the vibrant colors and lively atmosphere of city streets as the sun sets, capturing moments that tell stories of urban life. The golden hour transforms ordinary streets into magical pathways where every shadow tells a story and every light creates a moment of wonder. Street photography during sunset offers unique opportunities to capture the essence of urban life in its most beautiful form.')">
+                        <img src="https://picsum.photos/400/300?random=301" alt="City Streets at Sunset" class="w-full h-48 object-cover" />
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">The Magic of City Streets at Sunset</h3>
+                            <p class="text-gray-600 text-sm mb-2">by Arif Pratama</p>
+                            <p class="text-gray-700 text-base">Exploring the vibrant colors and lively atmosphere of city streets as the sun sets, capturing moments that tell stories of urban life.</p>
+                        </div>
+                    </div>
+                    <div class="article-card rounded-lg shadow-lg overflow-hidden bg-white cursor-pointer hover:shadow-xl transition-shadow duration-300" onclick="openArticleModal('Capturing the Soul of Street Music', 'https://picsum.photos/400/300?random=302', 'Sari Dewi', 'Bandung, Indonesia', 'A deep dive into the world of street musicians, their passion, and the emotions they evoke through their performances. Music fills the air as talented artists share their gifts with passersby, creating spontaneous concerts that bring communities together. Each musician has a unique story, and their melodies become the soundtrack of city life, touching hearts and inspiring souls.')">
+                        <img src="https://picsum.photos/400/300?random=302" alt="Soul of Street Music" class="w-full h-48 object-cover" />
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Capturing the Soul of Street Music</h3>
+                            <p class="text-gray-600 text-sm mb-2">by Sari Dewi</p>
+                            <p class="text-gray-700 text-base">A deep dive into the world of street musicians, their passion, and the emotions they evoke through their performances.</p>
+                        </div>
+                    </div>
+                    <div class="article-card rounded-lg shadow-lg overflow-hidden bg-white cursor-pointer hover:shadow-xl transition-shadow duration-300" onclick="openArticleModal('Urban Graffiti: Stories on Walls', 'https://picsum.photos/400/300?random=303', 'Budi Santoso', 'Yogyakarta, Indonesia', 'Discovering the stories behind urban graffiti art and the messages conveyed through colorful murals in city spaces. Street art serves as a powerful medium for social commentary, artistic expression, and cultural identity. These vibrant murals transform blank walls into canvases that speak to the community, reflecting hopes, dreams, and the collective voice of urban society.')">
+                        <img src="https://picsum.photos/400/300?random=303" alt="Urban Graffiti Stories" class="w-full h-48 object-cover" />
+                        <div class="p-4">
+                            <h3 class="font-bold text-lg mb-2">Urban Graffiti: Stories on Walls</h3>
+                            <p class="text-gray-600 text-sm mb-2">by Budi Santoso</p>
+                            <p class="text-gray-700 text-base">Discovering the stories behind urban graffiti art and the messages conveyed through colorful murals in city spaces.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <footer class="bg-gray-900 text-white py-12">
+            <div class="container mx-auto px-4">
+                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
+                    <div class="md:col-span-2">
+                        <div class="flex items-center mb-4">
+                            <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                                <div class="w-6 h-6 bg-gray-900 rounded-full"></div>
+                            </div>
+                            <div>
+                                <h3 class="text-2xl font-bold">WALKING STORY</h3>
+                                <p class="text-sm text-gray-400">PHOTOGRAPHY</p>
+                            </div>
+                        </div>
+                        <p class="text-gray-300 mb-4 max-w-md">
+                            Capturing authentic moments of life through street photography. 
+                            Every frame tells a story, every story connects us to humanity.
+                        </p>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M12.017 0C5.396 0 .029 5.367.029 11.987c0 5.079 3.158 9.417 7.618 11.174-.105-.949-.199-2.403.041-3.439.219-.937 1.406-5.957 1.406-5.957s-.359-.72-.359-1.781c0-1.663.967-2.911 2.168-2.911 1.024 0 1.518.769 1.518 1.688 0 1.029-.653 2.567-.992 3.992-.285 1.193.6 2.165 1.775 2.165 2.128 0 3.768-2.245 3.768-5.487 0-2.861-2.063-4.869-5.008-4.869-3.41 0-5.409 2.562-5.409 5.199 0 1.033.394 2.143.889 2.741.099.12.112.225.085.345-.09.375-.293 1.199-.334 1.363-.053.225-.172.271-.402.165-1.495-.69-2.433-2.878-2.433-4.646 0-3.776 2.748-7.252 7.92-7.252 4.158 0 7.392 2.967 7.392 6.923 0 4.135-2.607 7.462-6.233 7.462-1.214 0-2.357-.629-2.75-1.378l-.748 2.853c-.271 1.043-1.002 2.35-1.492 3.146C9.57 23.812 10.763 24.009 12.017 24.009c6.624 0 11.99-5.367 11.99-11.988C24.007 5.367 18.641.001.012.001z"/>
+                                </svg>
+                            </a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">
+                                <svg class="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Categories</h4>
+                        <ul class="space-y-2">
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="human-interest">Human Interest</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="culinary">Culinary</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="social-activity">Social Activity</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="cityscape">Cityscape</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="public-space">Public Space</a></li>
+                            <li><a href="#" class="text-gray-400 hover:text-white transition-colors category-link" data-category="environment">Environment</a></li>
+                        </ul>
+                    </div>
+                    
+                    <div>
+                        <h4 class="text-lg font-semibold mb-4">Contact</h4>
+                        <div class="space-y-2 text-gray-400">
+                            <p class="flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
+                                    <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
+                                </svg>
+                                hello@walkingstory.com
+                            </p>
+                            <p class="flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd" d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z" clip-rule="evenodd"/>
+                                </svg>
+                                Jakarta, Indonesia
+                            </p>
+                            <p class="flex items-center">
+                                <svg class="w-4 h-4 mr-2" fill="currentColor" viewBox="0 0 20 20">
+                                    <path d="M2 3a1 1 0 011-1h2.153a1 1 0 01.986.836l.74 4.435a1 1 0 01-.54 1.06l-1.548.773a11.037 11.037 0 006.105 6.105l.774-1.548a1 1 0 011.059-.54l4.435.74a1 1 0 01.836.986V17a1 1 0 01-1 1h-2C7.82 18 2 12.18 2 5V3z"/>
+                                </svg>
+                                +62 123 456 789
+                            </p>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="border-t border-gray-700 pt-8">
+                    <div class="flex flex-col md:flex-row justify-between items-center">
+                        <p class="text-gray-400 text-sm mb-4 md:mb-0">
+                            © 2024 Walking Story Photography. All rights reserved.
+                        </p>
+                        <div class="flex space-x-6 text-sm">
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Privacy Policy</a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">Terms of Service</a>
+                            <a href="#" class="text-gray-400 hover:text-white transition-colors">About</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+    <div id="human-interest-view" class="category-view" style="display: none;">
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+                <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+            </div> 
+        </header>
+        
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="mb-8 text-center relative">
+                    <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                    ← Back to Categories
+                 </button>
+                    <h2 class="text-4xl font-bold text-gray-800 inline-block">HUMAN INTEREST</h2>
+                </div>
+
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Tertawa saat boncengan.jpg" alt="Human Interest Photo 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Tertawa saat boncengan</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Penjahit Di Tengah Jalan (1).jpg" alt="Human Interest Photo 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Penjahit Di Tengah Jalan</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Seorang Pria Telponan.jpg" alt="Human Interest Photo 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Seorang Pria Telponan</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Petugas Membersihkan Area Mall.jpg" alt="Human Interest Photo 4" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Petugas Membersihkan Area Mall</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Bersama Saling Bantu-Membantu.jpg" alt="Human Interest Photo 5" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Bersama Saling Bantu-Membantu</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Perbincangan 2 pria.jpg" alt="Human Interest Photo 6" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Perbincangan 2 pria</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Bersantai Dalam Kesendirian.jpg" alt="Human Interest Photo 7" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Bersantai Dalam Kesendirian</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Pencari Nafkah.jpg" alt="Human Interest Photo 8" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pencari Nafkah</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Menunggu Seseorang.jpg" alt="Human Interest Photo 9" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Menunggu Seseorang</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Restock Mainan.jpg" alt="Human Interest Photo 10" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Restock Mainan</h4>
+                            <p class="text-sm">📍samarinda square</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Istirahat dari Realita.jpg" alt="Human Interest Photo 11" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Istirahat dari Realita</h4>
+                            <p class="text-sm">📍taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Perjalanan Seorang Nenek.jpg" alt="Human Interest Photo 12" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Perjalanan Seorang Nenek</h4>
+                            <p class="text-sm">📍taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Seorang Pelari Di Bawah Pepohonan.jpg" alt="Human Interest Photo 13" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Seorang Pelari Di Bawah Pepohonan</h4>
+                            <p class="text-sm">📍taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Seorang penjual keliling yang tak kenal lelah.jpg" alt="Human Interest Photo 14" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Seorang penjual keliling yang tak kenal lelah</h4>
+                            <p class="text-sm">📍taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=114" alt="Human Interest Photo 15" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Nenek Penjual Jamu</h4>
+                            <p class="text-sm">📍Malang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="culinary-view" class="category-view" style="display: none;">
+    <header class="bg-white shadow-sm py-6">
+        <div class="container mx-auto px-4 text-center">
+            <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+            <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+        </div>
+    </header>
+    
+    <section class="py-12">
+        <div class="container mx-auto px-4">
+           <div class="mb-8 text-center relative">
+                <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                    ← Back to Categories
+                </button>
+                <h2 class="text-4xl font-bold text-gray-800 inline-block">CULINARY</h2>
+                </div>
+
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="img/Pedagang Jajanan Kaki Lima.jpg" alt="Culinary Photo 1" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Pedagang Jajanan Kaki Lima</h4>
+                        <p class="text-sm">📍Taman samarinda</p>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=202" alt="Culinary Photo 2" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Kopi Pagi di Kedai Lokal</h4>
+                        <p class="text-sm">📍Bandung</p>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=203" alt="Culinary Photo 3" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Pedagang Bakso Keliling</h4>
+                        <p class="text-sm">📍Jakarta</p>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=204" alt="Culinary Photo 4" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Menikmati Soto Lamongan</h4>
+                        <p class="text-sm">📍Surabaya</p>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=205" alt="Culinary Photo 5" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Aneka Rempah Dapur</h4>
+                        <p class="text-sm">📍Pasar Tradisional</p>
+                    </div>
+                </div>
+                <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                    <img src="https://picsum.photos/400/300?random=206" alt="Culinary Photo 6" class="w-full h-64 object-cover">
+                    <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                    <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                        <h4 class="font-bold text-lg">Suasana Warung Kopi</h4>
+                        <p class="text-sm">📍Malang</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+    <div id="social-activity-view" class="category-view" style="display: none;">
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+                <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+            </div>
+        </header>
+        
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="mb-8 text-center relative">
+            <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Back to Categories
+            </button>
+            <h2 class="text-4xl font-bold text-gray-800 inline-block">SOCIAL ACTIVITY</h2>
+        </div>
+
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Belanja Mingguan sudah di edit.jpg" alt="Social Activity Photo 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Belanja Mingguan</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Istirahat Sejenak (1).jpg" alt="Social Activity Photo 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Istirahat Sejenak</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Percakapan di lorong lembuswana edit (1).jpg" alt="Social Activity Photo 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Percakapan di lorong</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Tugu Perjuangan Rakyat Kaltim.jpg" alt="Social Activity Photo 4" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Tugu Perjuangan Rakyat Kaltim</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Mahasiswi Sedang Makan di Lorong Masjid.jpg" alt="Social Activity Photo 5" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Mahasiswi Sedang Makan di Lorong Masjid</h4>
+                            <p class="text-sm">📍islamic centre</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Kumpulan Mahasiswa sedang Menyanyikan Yel-Yel.jpg" alt="Social Activity Photo 6" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Kumpulan Mahasiswa sedang Menyanyikan Yel-Yel</h4>
+                            <p class="text-sm">📍islamic centre</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=207" alt="Social Activity Photo 7" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Upacara Adat</h4>
+                            <p class="text-sm">📍Toraja</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=208" alt="Social Activity Photo 8" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pameran Seni Jalanan</h4>
+                            <p class="text-sm">📍Semarang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=209" alt="Social Activity Photo 9" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pasar Malam</h4>
+                            <p class="text-sm">📍Solo</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=210" alt="Social Activity Photo 10" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pertandingan Olahraga Lokal</h4>
+                            <p class="text-sm">📍Makassar</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=211" alt="Social Activity Photo 11" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Lomba Tradisional</h4>
+                            <p class="text-sm">📍Padang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=212" alt="Social Activity Photo 12" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Kegiatan Sosial Anak-Anak</h4>
+                            <p class="text-sm">📍Palembang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=213" alt="Social Activity Photo 13" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Perayaan Keagamaan</h4>
+                            <p class="text-sm">📍Denpasar</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=214" alt="Social Activity Photo 14" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pentas Seni Tradisional</h4>
+                            <p class="text-sm">📍Malang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=215" alt="Social Activity Photo 15" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Bersantai di Kafe</h4>
+                            <p class="text-sm">📍Bogor</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="cityscape-view" class="category-view" style="display: none;">
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+                <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+            </div>
+        </header>
+        
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                 <div class="mb-8 text-center relative">
+            <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                ← Back to Categories
+            </button>
+            <h2 class="text-4xl font-bold text-gray-800 inline-block">CITY SCAPE</h2>
+        </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Arsitektur Gedung Gramedia.jpg" alt="Cityscape Photo 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Arsitektur Gedung Gramedia</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Gedung Dinas Kesehatan Kota Samarinda.jpg" alt="Cityscape Photo 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Gedung Dinas Kesehatan Kota Samarinda</h4>
+                            <p class="text-sm">📍Taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Gedung Simbol Tanggap Darurat Kota Samarinda.jpg" alt="Cityscape Photo 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Gedung Simbol Tanggap Darurat Kota Samarinda</h4>
+                            <p class="text-sm">📍Taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Lampu Hias Ikonik di Taman Samarendah.jpg" alt="Cityscape Photo 4" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Lampu Hias Ikonik di Taman Samarendah</h4>
+                            <p class="text-sm">📍Taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Mall Lembuswana Samarinda Sudah di edit.jpg" alt="Cityscape Photo 5" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Mall Lembuswana Samarinda Sudah di edit</h4>
+                            <p class="text-sm">📍Mall Lembuswana </p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Masjid Al Jami' Al-Ma'ruf.jpg" alt="Cityscape Photo 6" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Masjid Al Jami' Al-Ma'ruf</h4>
+                            <p class="text-sm">📍islamic center</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Patung Kuda Menjadi Ikon Taman Samarinda.jpg" alt="Cityscape Photo 7" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Patung Kuda Menjadi Ikon Taman Samarinda</h4>
+                            <p class="text-sm">📍Taman Samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Patung Lembuswana.jpg" alt="Cityscape Photo 8" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Patung Lembuswana</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Simpang 4 Lembuswana.jpg" alt="Cityscape Photo 9" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Simpang 4 Lembuswana</h4>
+                            <p class="text-sm">📍Mall lembuswana</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Taman Samarinda.jpg" alt="Cityscape Photo 10" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Taman Samarinda</h4>
+                            <p class="text-sm">📍Taman Samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Arsitektur dan Jejak Pejalan Kaki.jpg" alt="Cityscape Photo 11" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Arsitektur dan Jejak Pejalan Kaki</h4>
+                            <p class="text-sm">📍Teras samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/interior Tangga Masjid Islamic Center.jpg" alt="Cityscape Photo 12" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">interior Tangga Masjid Islamic Centers</h4>
+                            <p class="text-sm">📍Islamic Center</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Keindahan Masjid Islamic Center Samarinda.jpg" alt="Cityscape Photo 13" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Keindahan Masjid Islamic Center Samarinda</h4>
+                            <p class="text-sm">📍Islamic Center</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/LorongBerpilar DI Masjid Islamic Center.jpg" alt="Cityscape Photo 14" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">LorongBerpilar DI Masjid Islamic Center</h4>
+                            <p class="text-sm">📍Islamic Center</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Masjid Baitul Muttaqien Islamic Center Samarinda.jpg" alt="Cityscape Photo 15" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Masjid Baitul Muttaqien Islamic Center Samarinda</h4>
+                            <p class="text-sm">📍Islamic Center</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="public-space-view" class="category-view" style="display: none;">
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+                <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+            </div>
+        </header>
+        
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4">
+                 <div class="mb-8 text-center relative">
+                <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                    ← Back to Categories
+                </button>
+                <h2 class="text-4xl font-bold text-gray-800 inline-block">PUBLIC SPACE</h2>
+            </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=401" alt="Public Space Photo 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Taman Kota yang Hijau</h4>
+                            <p class="text-sm">📍Jakarta</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=402" alt="Public Space Photo 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Alun-Alun di Sore Hari</h4>
+                            <p class="text-sm">📍Bandung</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=403" alt="Public Space Photo 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Trotoar Ramai Pejalan Kaki</h4>
+                            <p class="text-sm">📍Surabaya</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=404" alt="Public Space Photo 4" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Area Bermain Anak</h4>
+                            <p class="text-sm">📍Yogyakarta</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=405" alt="Public Space Photo 5" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pasar Tradisional</h4>
+                            <p class="text-sm">📍Semarang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=406" alt="Public Space Photo 6" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Halte Bus</h4>
+                            <p class="text-sm">📍Makassar</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=407" alt="Public Space Photo 7" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Stasiun Kereta Api</h4>
+                            <p class="text-sm">📍Medan</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=408" alt="Public Space Photo 8" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Jalan Setapak di Desa</h4>
+                            <p class="text-sm">📍Bali</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=409" alt="Public Space Photo 9" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pesisir Pantai</h4>
+                            <p class="text-sm">📍Lombok</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=410" alt="Public Space Photo 10" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Lapangan Terbuka</h4>
+                            <p class="text-sm">📍Surakarta</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=411" alt="Public Space Photo 11" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Jalan Perumahan</h4>
+                            <p class="text-sm">📍Bogor</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=412" alt="Public Space Photo 12" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Area Parkir</h4>
+                            <p class="text-sm">📍Depok</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=413" alt="Public Space Photo 13" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Gerbang Perumahan</h4>
+                            <p class="text-sm">📍Bekasi</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=414" alt="Public Space Photo 14" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Area Komersial</h4>
+                            <p class="text-sm">📍Tanggerang</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=415" alt="Public Space Photo 15" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pintu Gerbang Kota</h4>
+                            <p class="text-sm">📍Karawang</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <div id="environment-view" class="category-view" style="display: none;">
+        <header class="bg-white shadow-sm py-6">
+            <div class="container mx-auto px-4 text-center">
+                <h1 class="text-3xl font-bold text-gray-800">WALKING STORY</h1>
+                <p class="text-gray-600 text-sm mt-1">PHOTOGRAPHY</p>
+            </div>
+        </header>
+        
+        <section class="py-12">
+            <div class="container mx-auto px-4">
+                <div class="container mx-auto px-4">
+                 <div class="mb-8 text-center relative">
+                <button class="back-button absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white px-6 py-2 rounded-lg hover:bg-gray-700 transition-colors">
+                    ← Back to Categories
+                </button>
+                <h2 class="text-4xl font-bold text-gray-800 inline-block">ENVIRONMENT</h2>
+            </div>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 max-w-7xl mx-auto">
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Pemotor di dedaunan.jpg" alt="Environment Photo 1" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pemotor di dedaunan</h4>
+                            <p class="text-sm">📍Samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Taman Samarinda.jpg" alt="Environment Photo 2" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Taman Samarinda</h4>
+                            <p class="text-sm">📍Taman Samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Lampu Hias Ikonik di Taman Samarendah.jpg" alt="Environment Photo 3" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Lampu Hias Ikonik di Taman Samarendah</h4>
+                            <p class="text-sm">📍Taman samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Patung Kuda Menjadi Ikon Taman Samarinda.jpg" alt="Environment Photo 4" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Patung Kuda Menjadi Ikon Taman Samarinda</h4>
+                            <p class="text-sm">📍Taman Samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="img/Arsitektur dan Jejak Pejalan Kaki.jpg" alt="Environment Photo 5" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Arsitektur dan Jejak Pejalan Kaki</h4>
+                            <p class="text-sm">📍Teras samarinda</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=506" alt="Environment Photo 6" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Danau Tenang</h4>
+                            <p class="text-sm">📍Sumatera Utara</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=507" alt="Environment Photo 7" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Air Terjun</h4>
+                            <p class="text-sm">📍Sulawesi Selatan</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=508" alt="Environment Photo 8" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Gua Alami</h4>
+                            <p class="text-sm">📍Jawa Timur</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=509" alt="Environment Photo 9" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Perkebunan Teh</h4>
+                            <p class="text-sm">📍Jawa Barat</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=510" alt="Environment Photo 10" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Gunung Berapi</h4>
+                            <p class="text-sm">📍Jawa Tengah</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=511" alt="Environment Photo 11" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pulau Kecil</h4>
+                            <p class="text-sm">📍Kepulauan Riau</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=512" alt="Environment Photo 12" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Padang Rumput</h4>
+                            <p class="text-sm">📍Sumba</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=513" alt="Environment Photo 13" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pohon Besar</h4>
+                            <p class="text-sm">📍Sulawesi Utara</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=514" alt="Environment Photo 14" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Bunga Mekar</h4>
+                            <p class="text-sm">📍Bandung</p>
+                        </div>
+                    </div>
+                    <div class="photo-item relative overflow-hidden rounded-lg shadow-lg group cursor-pointer">
+                        <img src="https://picsum.photos/400/300?random=515" alt="Environment Photo 15" class="w-full h-64 object-cover">
+                        <div class="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-30 transition-all duration-300"></div>
+                        <div class="photo-tooltip absolute bottom-4 left-4 right-4 text-white opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                            <h4 class="font-bold text-lg">Pemandangan Ladang</h4>
+                            <p class="text-sm">📍Jawa Timur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Photo Modal -->
+    <div id="photo-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-container">
+            <div class="modal-header">
+                <div class="modal-header-content">
+                    <div class="modal-logo"></div>
+                    <div class="modal-header-text">
+                        <h3 class="modal-brand">WALKING STORY</h3>
+                        <p class="modal-subtitle">PHOTOGRAPHY</p>
+                    </div>
+                </div>
+                <button class="modal-close" onclick="closePhotoModal()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-content-layout">
+                    <div class="modal-left-content">
+                        <h2 id="modal-photo-title" class="modal-photo-title"></h2>
+                        <p id="modal-photo-description" class="modal-photo-description">Potret kehidupan di pesisir kabupaten berau</p>
+                        <div class="modal-photo-details">
+                            <div class="modal-detail-item">
+                                <span class="modal-detail-label">Lokasi:</span> <span id="modal-photo-location"></span>
+                            </div>
+                            <div class="modal-detail-item">
+                                <span class="modal-detail-label">Fotografer:</span> <span id="modal-photo-photographer"></span>
+                            </div>
+                            <div class="modal-detail-item">
+                                <span class="modal-detail-label">Kategori:</span> <span id="modal-photo-category"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-right-content">
+                        <img id="modal-photo-image" src="" alt="" class="modal-image">
+                    </div>
+                </div>
+                <div class="modal-location-center" id="modal-location-center">Samarinda</div>
+                <div class="modal-categories-section">
+                    <h3 class="modal-categories-title">Categories</h3>
+                    <div class="modal-categories-grid">
+                        <button class="modal-category-btn human-interest">HUMAN INTEREST</button>
+                        <button class="modal-category-btn culinary">CULINARY</button>
+                        <button class="modal-category-btn social-activity">SOCIAL ACTIVITY</button>
+                        <button class="modal-category-btn cityscape">CITYSCAPE</button>
+                        <button class="modal-category-btn public-space">PUBLIC SPACE</button>
+                        <button class="modal-category-btn environment">ENVIRONMENT</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Article Modal -->
+    <div id="article-modal" class="modal-overlay" style="display: none;">
+        <div class="modal-container article-modal">
+            <div class="modal-header">
+                <h3 id="modal-article-title" class="modal-title"></h3>
+                <button class="modal-close" onclick="closeArticleModal()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="modal-body">
+                <div class="article-content">
+                    <img id="modal-article-image" src="" alt="" class="article-image">
+                    <div class="article-meta">
+                        <p id="modal-article-author" class="article-author"></p>
+                        <p id="modal-article-location" class="article-location"></p>
+                    </div>
+                    <div id="modal-article-content" class="article-text"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
